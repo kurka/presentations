@@ -1,2 +1,2 @@
-# presentations
-Presentations presented in presentations.
+# Presentations
+Gathering of some of the presentations performed in this brief career.
