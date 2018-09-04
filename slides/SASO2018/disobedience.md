@@ -3,6 +3,7 @@ title: 'Disobedience as a Mechanism of Change'
 author: \textbf{David Burth Kurka}^1^, Jeremy Pitt^1^, Peter Lewis^2^, Alina Patelli^2^ and Anikó Ekárt^2^
 date: 12th IEEE SASO, 3-7 Sep 2018, Trento Italy
 header-includes:
+    - \usepackage{graphicx}
     - \usepackage{bbm}
     - \usepackage{algorithm}
     - \usepackage{algpseudocode}
@@ -19,27 +20,52 @@ header-includes:
 
 # Introduction
 
+## Aim and Scope
+
+> We propose that the social concept of \alert{disobedience} can be used as a
+>  mechanism for \alert{adaptive and exploratory learning} in norm-governed
+>  multi-agent systems.
+
 ## Disobedience in Society
+
+\columnsbegin
+\column{0.6\textwidth}
 
 - **Disobedience** has been used historically as a form of resistance and call for change in unfair regimes.
 - Among the factors that motivate widespread disobedience are:
-    - **The iron law of oligarchy** - The tendency of rulers to change norms to their own benefit.
-    - **Principled violation of policy** - Selective common-sense non-application of a sanction.
+    - **The iron law of oligarchy** - the tendency for a small group to emerge
+    an run complex organisations for its own benefit, rather than the collective
+    interest
+    - **Principled violation of policy** - law enforcement relaxation, with
+      selective common-sense non-application of sanctions
 
 
-## Disobedience as learning mechanism
+\column{0.4\textwidth}
+
+![Suffragette's in UK](./img/suffragettes.jpg)
+
+\columnsend
+
+## Disobedience as Learning Mechanism
+
+\columnsbegin
+\column{0.6\textwidth}
 
 - Can these notions be applied to **norm-governed MAS**?
-- Can disobedience be a form of **social learning**, enabling the construction of adaptive systems?
-- How can those concepts enable **rule- or ruler-change** of corruptive systems?
+- How to deal with systems with **disfunctional norms**?
+- Can disobedience be a form of **collective learning**, enabling the construction of adaptive systems?
 
 
+\column{0.4\textwidth}
+
+![](img/robotdisobedience.jpg)
+
+\columnsend
 
 # Base Premises and Operationalisation
 
 ## Premises
 
-<!-- TODO: Progressive table? -->
 
 - **Base Premises**
    - **P1** - A norm is in place
@@ -49,7 +75,7 @@ header-includes:
 . . .
 
 - **Disobedience Premises**
-   - **P4** - Fairness decay over time (corruption)
+   - **P4** - Fairness decays over time (corruption)
    - **P5** - Possibility of pardon by law enforcers
 
 . . .
@@ -57,118 +83,214 @@ header-includes:
 - **Transformation Premises**
    - **P6** - Prescribed ruler destitution
 
-## Players and its roles
+## Operationalisation
 
-- **Rulers** - Resource Allocation Policy
-- **Police** - Check if apppropriation = allocation
-- **People** - Appropration of resource
+\columnsbegin
 
-<!-- TODO: Include icons -->
+\column{0.2\textwidth}
+
+![](img/disobedience-players.pdf){ height=50% }
+
+\column{0.8\textwidth}
+
+
+- Resource allocation scenario
+- Players and its roles:
+    - **Rulers** - Resource allocation policy
+    - **People** - Appropration of resource
+    - **Police** - Check if apppropriation = allocation
+
+\columnsend
 
 
 ## Disobedience levels
 ![](img/disobedience_flow.pdf)
 
 
+<!-- ## Learnable variables -->
+<!-- \begin{columns}[T] -->
+<!-- \begin{column}{0.25\textwidth} -->
+
+<!-- \textbf{Rulers} -->
+
+<!-- \vspace{5pt} -->
+<!-- $\mathbf{U}$ - Corruption of allocation policy -->
+
+<!-- \vspace{30pt} -->
+
+<!-- $$ -->
+<!-- \scalebox{0.9}{% -->
+<!-- $U = f(t)$ -->
+<!-- }$$ -->
+
+<!-- \end{column} -->
+
+<!-- \begin{column}{0.35\textwidth} -->
+
+<!-- \textbf{People} -->
+
+<!-- \vspace{5pt} -->
+
+<!-- $\mathbf{P_{Cheat}}$ - Decision of compliance as reaction of system's feedback -->
+
+<!-- $$ -->
+<!-- \scalebox{0.9}{% -->
+<!-- $P_{Cheat} = f(fairness_i)$ -->
+<!-- }$$ -->
+
+<!-- $$ -->
+<!--   \scalebox{0.8}{$ -->
+<!--      \begin{cases} -->
+<!--       \uparrow & \text{if sanctioned} \land \neg \text{fair} \\ -->
+<!--       \downarrow & \text{if sanctioned} \land \text{fair} \\ -->
+<!--       = & \text{if forgiven}\\ -->
+<!--       \uparrow & \text{if not caught}\\ -->
+<!--       \downarrow & \text{if compliant} -->
+<!--      \end{cases} -->
+<!--      $} -->
+<!-- $$ -->
+
+<!-- \end{column} -->
+<!-- \begin{column}{0.35\textwidth} -->
+
+<!-- \textbf{Police} -->
+
+<!-- \vspace{5pt} -->
+<!-- $\mathbf{P_{Forg}}$ - Probability of sanctioning pardon as function of perceived fairness -->
+
+<!-- \vspace{-14pt} -->
+
+<!-- $$ -->
+<!-- \scalebox{0.9}{% -->
+<!-- $P_{forg} = f(fairness)$ -->
+<!-- }$$ -->
+
+<!-- $$ -->
+<!-- \scalebox{0.8}{% -->
+<!-- $fairness \sim Gini(Sat)$ -->
+<!-- } -->
+<!-- $$ -->
+
+<!-- \end{column} -->
+
+<!-- \end{columns} -->
+
 ## Learning variables
 <!-- \columnsbegin -->
-\begin{columns}[T]
-\column{0.33\textwidth}
 
-\textbf{Rulers}
+\textbf{Rulers}: 
 
-$\mathbf{U}$ - Corruption of allocation policy
+$\qquad \mathbf{U}$ - Corruption of allocation policy
 
-\begin{center}
-$$U = f(t)$$
-\end{center}
+\vspace{-20pt}
+$$
+\scalebox{0.8}{%
+$U = f(\mathit{time})$
+}$$
 
-\column{0.33\textwidth}
+\vspace{-15pt}
 
-\textbf{Police}
+\textbf{Police}: 
 
-$\mathbf{P_{forg}}$ - Probability of sanctioning pardon as function of perceived fairness
+$\qquad \mathbf{P_{forg}}$ - Probability of sanction pardon as function of perceived fairness
 
+\vspace{-20pt}
 
-$$P_{forg} = f(fairness)$$
+$$
+\scalebox{0.8}{%
+$P_{forg} = f(\mathit{fairness}) \qquad \mathit{fairness} \sim Gini(\mathit{Satisf})$
+}$$
 
-$$fairness \sim Gini(Satisf)$$
+\vspace{-15pt}
 
-\column{0.33\textwidth}
+\textbf{People}: 
 
-\textbf{People}
+$\qquad \mathbf{P_{Cheat}}$ - Decision of compliance as reaction of system's feedback
 
-$\mathbf{P_{Cheat}}$ - Decision of compliance as reaction of system's feedback
+\vspace{-20pt}
 
-$$P_{Cheat} = f(fairness_i)$$
-
-\end{columns}
-<!-- \columnsend -->
-
-<!-- TODO: fixme! -->
-<!-- 1. Sanction -->
-<!--      $$ PCheat' = -->
-<!--      \begin{cases} -->
-<!--       (1 - \alpha_{1}) \cdot PCheat +  \alpha_{1} & \text{if } \neg IsFair\\ -->
-<!--       (1 - \beta_{2}) \cdot PCheat  & \text{if } IsFair -->
-<!--      \end{cases} $$ -->
-<!-- 2. Forgiveness -->
-<!--      $$PCheat' = PCheat$$ -->
-<!-- 3. Not Caught -->
-<!--      $$PCheat' = (1-\alpha_{2}) \cdot PCheat + \alpha_{2}$$ -->
-<!-- 4. Compliant -->
-<!--      $$PCheat' = (1 - \beta_{2}) \cdot PCheat$$ -->
+$$
+\scalebox{0.8}{%
+$P_{Cheat} = f(\mathit{fairness}_i) \qquad
+    \begin{cases}
+    \uparrow & \text{if sanctioned} \land \neg \text{fair} \\
+    \downarrow & \text{if sanctioned} \land \text{fair} \\
+    = & \text{if forgiven}\\
+    \uparrow & \text{if not caught}\\
+    \downarrow & \text{if compliant}
+    \end{cases}
+    $
+}$$
 
 
-# Experimanetal Results
+# Experimental Results
 
 ## Exploratory Space
 
-![Exploratory space considered in experiments. Labels give interpretations of system behaviour at each quadrant.](img/space_disob.pdf)
+\centering
+
+![](img/space_disob.pdf){ width=75% }
+
 
 <!-- TODO: also present timeline structure? -->
 
 ## Base Game
 
 \columnsbegin
-\column{0.7\textwidth}
+\column{0.6\textwidth}
 
 ![](img/phasebase-crop.pdf)
 
-\column{0.3\textwidth}
+\column{0.4\textwidth}
 
 Without pardoning or reformation, People stay at the mercy of rulers, not having
-another rational choice than obeying, no matter how unfair is the current
+another rational choice than to obey, no matter how unfair is the current
 policy.
 
 
 \columnsend
 
-. . .
+## Base Game
 
-<!-- ![](img/timebase.pdf)![](img/timeunjustified.pdf)![](img/timeexploitation.pdf)![](img/timeoppresion.pdf) -->
-\includegraphics[width=0.24\linewidth]{img/timebase.pdf}
-\includegraphics[width=0.24\linewidth]{img/timeunjustified.pdf}
-\includegraphics[width=0.24\linewidth]{img/timeexploitation.pdf}
-\includegraphics[width=0.24\linewidth]{img/timeoppresion.pdf}
+\columnsbegin
+\column{0.6\textwidth}
 
-<!-- TODO: fix sizes and add caption -->
-<!-- % \begin{center} -->
-<!-- % \includegraphics[width=1.0\columnwidth]{img/timebase.pdf}% \hspace{4em} -->
+![](img/phasebase-crop.pdf)
 
-<!-- % \includegraphics[width=1.0\columnwidth]{img/timeunjustified.pdf} -->
+\column{0.4\textwidth}
 
-<!-- % \includegraphics[width=1.0\columnwidth]{img/timeexploitation.pdf}% \hspace{4em} -->
 
-<!-- % \includegraphics[width=1.0\columnwidth]{img/timeoppresion.pdf} -->
-<!-- % \end{center} -->
-<!-- \begin{figure}[H] -->
-<!--   \centering -->
-<!--   \subfloat[Peace]{\includegraphics[width=.25\linewidth]{img/timebase.pdf}\label{fig:stability}} -->
-<!--   \subfloat[Unjust.\ Disobedience]{\includegraphics[width=.25\linewidth]{img/timeunjustified.pdf}\label{fig:unjustified}} -->
-<!--   \subfloat[Exploitation]{\includegraphics[width=.25\linewidth]{img/timeexploitation.pdf}\label{fig:exploitation}} -->
-<!-- \subfloat[Oppression]{\includegraphics[width=.25\linewidth]{img/timeoppresion.pdf}\label{fig:oppression}} -->
-<!-- \end{figure} -->
+Peace:
+
+![](img/timebase.pdf)
+
+
+Unjustified Disobedience:
+
+![](img/timeunjustified.pdf)
+
+\columnsend
+
+## Base Game
+
+\columnsbegin
+\column{0.6\textwidth}
+
+![](img/phasebase-crop.pdf)
+
+\column{0.4\textwidth}
+
+
+Exploitation:
+
+![](img/timeexploitation.pdf)
+
+
+Oppresion:
+
+![](img/timeoppresion.pdf)
+
+\columnsend
 
 
 ## First Extension - Pardoning
@@ -180,11 +302,11 @@ policy.
 
 \column{0.4\textwidth}
 
-- Obedience is now conditioned to unfairness level: if fair, agents obey; if
+
+Obedience is conditioned to unfairness level: if fair, agents obey; if
 unfair, tendency to non-compliance
 
-- Differentiation between justified and unjustified disobedience: given unfair
-allocation policy, Police validate norms disobedience, pardoning transgressions
+Police validates justified norms disobedience, pardoning transgressions
 
 
 \columnsend
@@ -198,7 +320,10 @@ allocation policy, Police validate norms disobedience, pardoning transgressions
 
 \column{0.4\textwidth}
 
-![Revolution](img/timerevolution.pdf)
+Revolution:
+\newline
+
+![](img/timerevolution.pdf)
 
 <!-- Agents can protest by freely demonstrating their dissatisfaction and -->
 <!-- appropriating resources, restoring the environment's fairness. -->
@@ -209,24 +334,23 @@ allocation policy, Police validate norms disobedience, pardoning transgressions
 ## Second Extension - Reformation
 
 - Lost of governability implies in **ruler change**
-
-- If $\bar{\text{NCompliant}} \geq \mathcal{T} \rightarrow \text{Reformation}$
-
-<!-- TODO: fixme -->
-
-
+- If $\text{Non-Compliance} \geq \mathcal{T} \rightarrow \text{Reformation}$
 - Set of non Rulers become the new Rulers, individual satisfaction is randomly
 restarted
 
 
-## Equilibrium 1 - Reformation cycles
+- 3 possible equilbibria...
+
+## Equilibrium 1 - Reformation Cycles
 
 \columnsbegin
 \column{0.6\textwidth}
 
+
 ![](img/trajext2corrupted.pdf)
 
 \column{0.4\textwidth}
+
 
 ![](img/timecycle.pdf)
 
@@ -250,8 +374,8 @@ restarted
 \columnsend
 
 Knowing the Reformation Threshold $\mathcal{T}$, unfairness is manipulated so
-Rulers can please People with just the amount of resource needed so they
-disobedience remains in controlled levels.
+Rulers please People with just enough resources so their disobedience remains in
+controlled levels.
 
 
 ## Equilibrium 3 - Pragmatic revolution
@@ -277,16 +401,16 @@ same for all agents.
 
 - \alert{Disobedience} as tool for adaptive learning in norm-governed MAS
     - Standard norm-governed systems guarantees agents' **obedience**, but not
-    **governance fairness**, allowing exploitation and oppresion of agents
+    **governance fairness**, allowing exploitation and oppression of agents
     - The introduction of **pardoning mechanisms** changes the system's dynamic
     equilibrium by justfifying **disobedience** as a revolutionary behaviour for
     justice restoration
     - The introduction of formal **reformation mechanisms** changes the equilibrium once
-    more, giving supplemenatary power to non-Rulers and enabling **cycles of
+    more, giving supplementary power to non-Rulers and enabling **cycles of
     change**
     
 - Open questions / Future work:
-    - Could have we defined subjective terms such as *fairness*, *obedience*, *unjustified*,
+    - Could we have defined subjective terms such as *fairness*, *obedience*, *unjustified*,
         *revolution* in different ways?
     - What would happen if agents had limited or subjective knowledge of events
       happening in the network? How interpersonal factors such as *social
@@ -294,7 +418,7 @@ same for all agents.
     - How to escape from simple system reformation and move towards
       post-revolution reconstruction?
 
-  
+<!-- TODO: shrink!   -->
 
 ## Acknowledgemnts
 
