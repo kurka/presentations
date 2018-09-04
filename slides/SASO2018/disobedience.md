@@ -22,7 +22,7 @@ header-includes:
 
 ## Aim and Scope
 
-> We propose that the social concept of \alert{disobedience} can be used as a
+> The social concept of \alert{disobedience} can be used as a
 >  mechanism for \alert{adaptive and exploratory learning} in norm-governed
 >  multi-agent systems.
 
@@ -53,7 +53,8 @@ header-includes:
 
 - Can these notions be applied to **norm-governed MAS**?
 - How to deal with systems with **disfunctional norms**?
-- Can disobedience be a form of **collective learning**, enabling the construction of adaptive systems?
+- Can disobedience be a form of **collective learning**, enabling **adaptive
+  systems**?
 
 
 \column{0.4\textwidth}
@@ -78,10 +79,9 @@ header-includes:
    - **P4** - Fairness decays over time (corruption)
    - **P5** - Possibility of pardon by law enforcers
 
-. . .
 
 - **Transformation Premises**
-   - **P6** - Prescribed ruler destitution
+   - **P6** - Prescribed ruler destitution and new government formation
 
 ## Operationalisation
 
@@ -175,7 +175,7 @@ header-includes:
 
 <!-- \end{columns} -->
 
-## Learning variables
+## Learnable variables
 <!-- \columnsbegin -->
 
 \textbf{Rulers}: 
@@ -213,7 +213,7 @@ $$
 \scalebox{0.8}{%
 $P_{Cheat} = f(\mathit{fairness}_i) \qquad
     \begin{cases}
-    \uparrow & \text{if sanctioned} \land \neg \text{fair} \\
+    \uparrow & \text{if sanctioned} \land \text{unfair} \\
     \downarrow & \text{if sanctioned} \land \text{fair} \\
     = & \text{if forgiven}\\
     \uparrow & \text{if not caught}\\
@@ -233,6 +233,7 @@ $P_{Cheat} = f(\mathit{fairness}_i) \qquad
 
 
 <!-- TODO: also present timeline structure? -->
+
 
 ## Base Game
 
@@ -303,8 +304,11 @@ Oppresion:
 \column{0.4\textwidth}
 
 
-Obedience is conditioned to unfairness level: if fair, agents obey; if
+Obedience is conditioned to unfairness level: 
+
+If fair, agents obey; if
 unfair, tendency to non-compliance
+\newline
 
 Police validates justified norms disobedience, pardoning transgressions
 
@@ -331,17 +335,19 @@ Revolution:
 \columnsend
 
 
-## Second Extension - Reformation
 
-- Lost of governability implies in **ruler change**
-- If $\text{Non-Compliance} \geq \mathcal{T} \rightarrow \text{Reformation}$
-- Set of non Rulers become the new Rulers, individual satisfaction is randomly
-restarted
+<!-- ## Second Extension - Reformation -->
+
+<!-- - Lost of governability implies in **ruler change** -->
+<!-- - If $\text{Non-Compliance} \geq \mathcal{T} \rightarrow \text{Reformation}$ -->
+<!-- - Set of non Rulers become the new Rulers, individual satisfaction is randomly -->
+<!-- restarted -->
 
 
-- 3 possible equilbibria...
+<!-- - 3 possible equilbibria... -->
 
-## Equilibrium 1 - Reformation Cycles
+#
+## Second Extension - Reformation - Reformation Cycles
 
 \columnsbegin
 \column{0.6\textwidth}
@@ -360,7 +366,7 @@ restarted
 - Alternation of power and higher overall satisfaction.
 - Points out the need for post-revolution reconstruction.
 
-## Equilibrium 2 - Popular control
+## Second Extension - Reformation - Popular Control
 
 \columnsbegin
 \column{0.6\textwidth}
@@ -378,7 +384,7 @@ Rulers please People with just enough resources so their disobedience remains in
 controlled levels.
 
 
-## Equilibrium 3 - Pragmatic revolution
+## Second Extension - Reformation - Pragmatic Revolution
 
 \columnsbegin
 \column{0.6\textwidth}
@@ -399,24 +405,24 @@ same for all agents.
 
 ## Final Remarks
 
-- \alert{Disobedience} as tool for adaptive learning in norm-governed MAS
-    - Standard norm-governed systems guarantees agents' **obedience**, but not
-    **governance fairness**, allowing exploitation and oppression of agents
-    - The introduction of **pardoning mechanisms** changes the system's dynamic
-    equilibrium by justfifying **disobedience** as a revolutionary behaviour for
-    justice restoration
-    - The introduction of formal **reformation mechanisms** changes the equilibrium once
-    more, giving supplementary power to non-Rulers and enabling **cycles of
-    change**
+- \alert{Disobedience} as a tool for adaptive learning in norm-governed MAS
+    - Usual systems try to guarantee **obedience**, but not **governance
+      fairness**
+    - **pardoning mechanisms** justify **disobedience** as a revolutionary
+      behaviour for justice restoration
+    - Formal **reformation mechanisms** give power to non-Rulers and enables
+      **cycles of change**
+      \newline
+    
     
 - Open questions / Future work:
-    - Could we have defined subjective terms such as *fairness*, *obedience*, *unjustified*,
-        *revolution* in different ways?
-    - What would happen if agents had limited or subjective knowledge of events
-      happening in the network? How interpersonal factors such as *social
-      influence*, *trust* and *misinformation* would affect the system?
+    - Can subjective terms as ***fairness*, *obedience*, *unjustified*,
+        *revolution*** be defined in different ways?
+    - What are the effects of limited or subjective knowledge of events? How
+      interpersonal factors such as ***social influence*, *trust* and
+      *misinformation*** could affect the system?
     - How to escape from simple system reformation and move towards
-      post-revolution reconstruction?
+      **post-revolution reconstruction**?
 
 <!-- TODO: shrink!   -->
 
