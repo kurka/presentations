@@ -10,6 +10,7 @@ header-includes:
     - \usepackage{multirow}
     - \usepackage{pgf-umlsd}
     - \usepackage{unicode-math}
+    - \usepackage{appendixnumberbeamer}
     - \usefonttheme[onlymath]{serif}
     - \metroset{block=fill, progressbar=foot}
     - \newcommand{\columnsbegin}{\begin{columns}}
@@ -20,11 +21,12 @@ header-includes:
 
 # Introduction
 
-## Aim and Scope
-
-> The social concept of \alert{disobedience} can be used as a
->  mechanism for \alert{adaptive and exploratory learning} in norm-governed
->  multi-agent systems.
+## In a Nutshell...
+ 
+\begin{center}
+\emph{The social concept of \alert{disobedience} can be used as a mechanism for
+\alert{adaptive and exploratory learning} in norm-governed multi-agent systems.}
+\end{center}
 
 ## Disobedience in Society
 
@@ -63,26 +65,7 @@ header-includes:
 
 \columnsend
 
-# Base Premises and Operationalisation
-
-## Premises
-
-
-- **Base Premises**
-   - **P1** - A norm is in place
-   - **P2** - Compliance is an individual decision
-   - **P3** - Existence of monitoring and sanctioning mechanisms
-
-. . .
-
-- **Disobedience Premises**
-   - **P4** - Fairness decays over time (corruption)
-   - **P5** - Possibility of pardon by law enforcers
-
-
-- **Transformation Premises**
-   - **P6** - Prescribed ruler destitution and new government formation
-
+# System Model
 ## Operationalisation
 
 \columnsbegin
@@ -94,7 +77,9 @@ header-includes:
 \column{0.8\textwidth}
 
 
-- Resource allocation scenario
+- Common-Pool Resource Management game
+\newline
+
 - Players and its roles:
     - **Rulers** - Resource allocation policy
     - **People** - Appropration of resource
@@ -103,7 +88,7 @@ header-includes:
 \columnsend
 
 
-## Disobedience levels
+## Disobedience Levels
 ![](img/disobedience_flow.pdf)
 
 
@@ -175,7 +160,7 @@ header-includes:
 
 <!-- \end{columns} -->
 
-## Learnable variables
+## Learnable Variables
 <!-- \columnsbegin -->
 
 \textbf{Rulers}: 
@@ -346,7 +331,7 @@ Revolution:
 
 <!-- - 3 possible equilbibria... -->
 
-#
+
 ## Second Extension - Reformation - Reformation Cycles
 
 \columnsbegin
@@ -428,9 +413,9 @@ same for all agents.
 
 ## Acknowledgemnts
 
-- National Council for Scientific and Technological Development (CNPq), Brazil;
+- National Council for Scientific and Technological Development (CNPq), Brazil
 
-- Diverse colaborators.
+- Diverse colaborators
 
 \begin{figure}
 \centering
@@ -446,3 +431,25 @@ same for all agents.
 ## {.standout}
 
 Thank you!
+
+Questions?
+
+
+
+# Base Premises and Operationalisation
+## Premises
+
+
+- **Base Premises**
+   - **P1** - A norm is in place
+   - **P2** - Compliance is an individual decision
+   - **P3** - Existence of monitoring and sanctioning mechanisms
+
+
+- **Disobedience Premises**
+   - **P4** - Fairness decays over time (corruption)
+   - **P5** - Possibility of pardon by law enforcers
+
+
+- **Transformation Premises**
+   - **P6** - Prescribed ruler destitution and new government formation
